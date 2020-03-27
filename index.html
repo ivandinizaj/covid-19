@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Covid-19</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <div id="wrapper">
+
+
+
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <div id="content">
+
+
+                <div id="info" class="container-fluid">
+
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 text-center">
+                        <h1 class="h3 mt-5 mb-0 text-gray-800">Coronavírus</h1>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-danger shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Infectados no mundo</div>
+                                            <div id="infcG" class="h5 mb-0 font-weight-bold text-gray-800">--</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-biohazard fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Curados</div>
+                                            <div id="curG" class="h5 mb-0 font-weight-bold text-gray-800">--</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-capsules fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-secondary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Mortos</div>
+                                            <div id="killG" class="h5 mb-0 font-weight-bold text-gray-800">--</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-skull-crossbones fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Estatísticas Global</h6>
+
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-pie pt-4 pb-2">
+
+                                        <canvas id="pieGb"></canvas>
+
+                                    </div>
+                                    <div class="mt-4 text-center small">
+                                        <span class="mr-2"><i class="fas fa-circle text-danger"></i> Infectados</span>
+                                        <span class="mr-2"><i class="fas fa-circle text-secondary"></i> Mortos</span>
+                                        <span class="mr-2"><i class="fas fa-circle text-success"></i> Curados </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Estatísticas no Brasil</h6>
+
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-pie pt-4 pb-2">
+
+                                        <canvas id="pieBR"></canvas>
+
+                                    </div>
+                                    <div class="mt-4 text-center small">
+                                        <span class="mr-2"><i class="fas fa-circle text-danger"></i> Infectados </span>
+                                        <span class="mr-2"><i class="fas fa-circle text-secondary"></i> Mortos </span>
+                                        <span class="mr-2"><i class="fas fa-circle text-success"></i> Curados </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4 mb-4">
+
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Brasil</h6>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="small font-weight-bold">Total de casos:<span id="tcB" class="float-right">--</span></h4>
+                                    <hr>
+                                    <h4 class="small font-weight-bold">Casos sérios:<span id="csB" class="float-right">--</span></h4>
+                                    <hr>
+                                    <h4 class="small font-weight-bold">Casos novos hoje:<span id="cnB" class="float-right">--</span></h4>
+                                    <hr>
+                                    <h4 class="small font-weight-bold">Mortos:<span id="kB" class="float-right">--</span></h4>
+                                    <hr>
+                                    <h4 class="small font-weight-bold">Novos mortos hoje:<span id="knB" class="float-right">--</span></h4>
+                                    <hr>
+                                    <h4 class="small font-weight-bold">Curados:<span id="cB" class="float-right">--</span></h4>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/e30cc27e8d.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script src="js/main.js"></script>
+
+    <script src="vendor/chart.js/Chart.js"></script>
+
+</body>
+
+</html>
