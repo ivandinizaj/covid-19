@@ -4,86 +4,185 @@
 
     const defaults = {
         baseURLG: 'https://thevirustracker.com/free-api?global=stats',
-        baseURLBR: 'https://thevirustracker.com/free-api?countryTotal=BR',
-        baseURLUS: 'https://thevirustracker.com/free-api?countryTotal=US',
+        baseURL: 'https://thevirustracker.com/free-api?countryTotal=',
         eleMain: document.getElementById('info'),
+        eleOP: '#op',
 
         eleInfcG: '#infcG',
         eleCurG: '#curG',
         eleKillG: '#killG',
 
-        eleTcB: '#tcB',
-        eleCaB: '#caB',
-        eleCsB: '#csB',
-        eleCnB: '#cnB',
-        eleKB: '#kB',
-        eleKnB: '#knB',
-        eleCB: '#cB',
-        eleNcB: '#ncB',
+        eleCtG: '#ctG',
+        eleCaG: '#caG',
+        eleCsG: '#csG',
+        eleKG: '#kG',
+        eleCG: '#cG',
+        eleCnG: '#cnG',
+        eleKnG: '#knG',
+        eleNrG: '#nrG',
 
-
-        eleTcUs: '#tcUs',
-        eleCaUs: '#caUs',
-        eleCsUs: '#csUs',
-        eleCnUs: '#cnUs',
-        eleKUs: '#kUs',
-        eleKnUs: '#knUs',
-        eleCUs: '#cUs',
-        eleNcUs: '#ncUs',
-
-
-        eleTcMund: '#tcMund',
-        eleCaMund: '#caMund',
-        eleCsMund: '#csMund',
-        eleCnMund: '#cnMund',
-        eleKMund: '#kMund',
-        eleKnMund: '#knMund',
-        eleCMund: '#cMund',
-        eleNcMund: '#ncMund',
+        eleACB: '#ACB',
+        eleACMB: '#ACMB',
+        eleALB: '#ALB',
+        eleALMB: '#ALMB',
+        eleAPB: '#APB',
+        eleAPMB: '#APMB',
+        eleAMB: '#AMB',
+        eleAMMB: '#AMMB',
+        eleBAB: '#BAB',
+        eleBAMB: '#BAMB',
+        eleCEB: '#CEB',
+        eleCEMB: '#CEMB',
+        eleDFB: '#DFB',
+        eleDFMB: '#DFMB',
+        eleESB: '#ESB',
+        eleESMB: '#ESMB',
+        eleGOB: '#GOB',
+        eleGOMB: '#GOMB',
+        eleMAB: '#MAB',
+        eleMAMB: '#MAMB',
+        eleMTB: '#MTB',
+        eleMTMB: '#MTMB',
+        eleMSB: '#MSB',
+        eleMSMB: '#MSMB',
+        eleMGB: '#MGB',
+        eleMGMB: '#MGMB',
+        elePAB: '#PAB',
+        elePAMB: '#PAMB',
+        elePBB: '#PBB',
+        elePBMB: '#PBMB',
+        elePRB: '#PRB',
+        elePRMB: '#PRMB',
+        elePEB: '#PEB',
+        elePEMB: '#PEMB',
+        elePIB: '#PIB',
+        elePIMB: '#PIMB',
+        eleRJB: '#RJB',
+        eleRJMB: '#RJMB',
+        eleRNB: '#RNB',
+        eleRNMB: '#RNMB',
+        eleRSB: '#RSB',
+        eleRSMB: '#RSMB',
+        eleROB: '#ROB',
+        eleROMB: '#ROMB',
+        eleRRB: '#RRB',
+        eleRRMB: '#RRMB',
+        eleSCB: '#SCB',
+        eleSCMB: '#SCMB',
+        eleSPB: '#SPB',
+        eleSPMB: '#SPMB',
+        eleSEB: '#SEB',
+        eleSEMB: '#SEMB',
+        eleTOB: '#TOB',
+        eleTOMB: '#TOMB',
     }
 
     const settings = {}
 
     const main = (event) => {
-        const geral = conectDb()
-        const br = conectDbBR()
-        const us = conectDbUS()
 
+        if (event.type == 'load') {
+            console.log('Carregou')
+            const mundo = conectDbg()
+            const pais = conectDbp(defaults.baseURL + 'BR')
 
-        settings.eleInfcG.innerHTML = fN(geral.results[0].total_cases)
-        settings.eleKillG.innerHTML = fN(geral.results[0].total_deaths)
-        settings.eleCurG.innerHTML = fN(geral.results[0].total_recovered)
+            settings.eleInfcG.innerHTML = fN(mundo.results[0].total_cases)
+            settings.eleKillG.innerHTML = fN(mundo.results[0].total_deaths)
+            settings.eleCurG.innerHTML = fN(mundo.results[0].total_recovered)
 
+            viewG(mundo.results[0].total_active_cases, mundo.results[0].total_deaths, mundo.results[0].total_recovered)
+            viewB(pais.countrydata[0].total_active_cases, pais.countrydata[0].total_deaths, pais.countrydata[0].total_recovered)
 
-        settings.eleTcB.innerHTML = fN(br.countrydata[0].total_cases)
-        settings.eleCaB.innerHTML = fN(br.countrydata[0].total_active_cases)
-        settings.eleCsB.innerHTML = fN(br.countrydata[0].total_serious_cases)
-        settings.eleCnB.innerHTML = fN(br.countrydata[0].total_new_cases_today)
-        settings.eleKB.innerHTML = fN(br.countrydata[0].total_deaths)
-        settings.eleKnB.innerHTML = fN(br.countrydata[0].total_new_deaths_today)
-        settings.eleCB.innerHTML = fN(br.countrydata[0].total_recovered)
-        settings.eleNcB.innerHTML = fN(br.countrydata[0].total_unresolved)
+            settings.eleCtG.innerHTML = fN(pais.countrydata[0].total_cases)
+            settings.eleCaG.innerHTML = fN(pais.countrydata[0].total_active_cases)
+            settings.eleCsG.innerHTML = fN(pais.countrydata[0].total_serious_cases)
+            settings.eleKG.innerHTML = fN(pais.countrydata[0].total_deaths)
+            settings.eleCG.innerHTML = fN(pais.countrydata[0].total_recovered)
+            settings.eleCnG.innerHTML = fN(pais.countrydata[0].total_new_cases_today)
+            settings.eleKnG.innerHTML = fN(pais.countrydata[0].total_new_deaths_today)
+            settings.eleNrG.innerHTML = fN(pais.countrydata[0].total_unresolved)
 
-        settings.eleTcUs.innerHTML = fN(us.countrydata[0].total_cases)
-        settings.eleCaUs.innerHTML = fN(us.countrydata[0].total_active_cases)
-        settings.eleCsUs.innerHTML = fN(us.countrydata[0].total_serious_cases)
-        settings.eleCnUs.innerHTML = fN(us.countrydata[0].total_new_cases_today)
-        settings.eleKUs.innerHTML = fN(us.countrydata[0].total_deaths)
-        settings.eleKnUs.innerHTML = fN(us.countrydata[0].total_new_deaths_today)
-        settings.eleCUs.innerHTML = fN(us.countrydata[0].total_recovered)
-        settings.eleNcUs.innerHTML = fN(us.countrydata[0].total_unresolved)
+            settings.eleACB.innerHTML = fN(dados.features[1].properties.casosconfirmados)
+            settings.eleACMB.innerHTML = fN(dados.features[1].properties.obitos)
+            settings.eleALB.innerHTML = fN(dados.features[14].properties.casosconfirmados)
+            settings.eleALMB.innerHTML = fN(dados.features[14].properties.obitos)
+            settings.eleAPB.innerHTML = fN(dados.features[5].properties.casosconfirmados)
+            settings.eleAPMB.innerHTML = fN(dados.features[5].properties.obitos)
+            settings.eleAMB.innerHTML = fN(dados.features[2].properties.casosconfirmados)
+            settings.eleAMMB.innerHTML = fN(dados.features[2].properties.obitos)
+            settings.eleBAB.innerHTML = fN(dados.features[16].properties.casosconfirmados)
+            settings.eleBAMB.innerHTML = fN(dados.features[16].properties.obitos)
+            settings.eleCEB.innerHTML = fN(dados.features[10].properties.casosconfirmados)
+            settings.eleCEMB.innerHTML = fN(dados.features[10].properties.obitos)
+            settings.eleDFB.innerHTML = fN(dados.features[30].properties.casosconfirmados)
+            settings.eleDFMB.innerHTML = fN(dados.features[30].properties.obitos)
+            settings.eleESB.innerHTML = fN(dados.features[19].properties.casosconfirmados)
+            settings.eleESMB.innerHTML = fN(dados.features[19].properties.obitos)
+            settings.eleGOB.innerHTML = fN(dados.features[29].properties.casosconfirmados)
+            settings.eleGOMB.innerHTML = fN(dados.features[29].properties.obitos)
+            settings.eleMAB.innerHTML = fN(dados.features[8].properties.casosconfirmados)
+            settings.eleMAMB.innerHTML = fN(dados.features[8].properties.obitos)
+            settings.eleMTB.innerHTML = fN(dados.features[28].properties.casosconfirmados)
+            settings.eleMTMB.innerHTML = fN(dados.features[28].properties.obitos)
+            settings.eleMSB.innerHTML = fN(dados.features[27].properties.casosconfirmados)
+            settings.eleMSMB.innerHTML = fN(dados.features[27].properties.obitos)
+            settings.eleMGB.innerHTML = fN(dados.features[18].properties.casosconfirmados)
+            settings.eleMGMB.innerHTML = fN(dados.features[18].properties.obitos)
+            settings.elePAB.innerHTML = fN(dados.features[4].properties.casosconfirmados)
+            settings.elePAMB.innerHTML = fN(dados.features[4].properties.obitos)
+            settings.elePBB.innerHTML = fN(dados.features[12].properties.casosconfirmados)
+            settings.elePBMB.innerHTML = fN(dados.features[12].properties.obitos)
+            settings.elePRB.innerHTML = fN(dados.features[23].properties.casosconfirmados)
+            settings.elePRMB.innerHTML = fN(dados.features[23].properties.obitos)
+            settings.elePEB.innerHTML = fN(dados.features[13].properties.casosconfirmados)
+            settings.elePEMB.innerHTML = fN(dados.features[13].properties.obitos)
+            settings.elePIB.innerHTML = fN(dados.features[9].properties.casosconfirmados)
+            settings.elePIMB.innerHTML = fN(dados.features[9].properties.obitos)
+            settings.eleRJB.innerHTML = fN(dados.features[20].properties.casosconfirmados)
+            settings.eleRJMB.innerHTML = fN(dados.features[20].properties.obitos)
+            settings.eleRNB.innerHTML = fN(dados.features[11].properties.casosconfirmados)
+            settings.eleRNMB.innerHTML = fN(dados.features[11].properties.obitos)
+            settings.eleRSB.innerHTML = fN(dados.features[25].properties.casosconfirmados)
+            settings.eleRSMB.innerHTML = fN(dados.features[25].properties.obitos)
+            settings.eleROB.innerHTML = fN(dados.features[0].properties.casosconfirmados)
+            settings.eleROMB.innerHTML = fN(dados.features[0].properties.obitos)
+            settings.eleRRB.innerHTML = fN(dados.features[3].properties.casosconfirmados)
+            settings.eleRRMB.innerHTML = fN(dados.features[3].properties.obitos)
+            settings.eleSCB.innerHTML = fN(dados.features[24].properties.casosconfirmados)
+            settings.eleSCMB.innerHTML = fN(dados.features[24].properties.obitos)
+            settings.eleSPB.innerHTML = fN(dados.features[21].properties.casosconfirmados)
+            settings.eleSPMB.innerHTML = fN(dados.features[21].properties.obitos)
+            settings.eleSEB.innerHTML = fN(dados.features[15].properties.casosconfirmados)
+            settings.eleSEMB.innerHTML = fN(dados.features[15].properties.obitos)
+            settings.eleTOB.innerHTML = fN(dados.features[6].properties.casosconfirmados)
+            settings.eleTOMB.innerHTML = fN(dados.features[6].properties.obitos)
 
-        settings.eleTcMund.innerHTML = fN(geral.results[0].total_cases)
-        settings.eleCaMund.innerHTML = fN(geral.results[0].total_active_cases)
-        settings.eleCsMund.innerHTML = fN(geral.results[0].total_serious_cases)
-        settings.eleCnMund.innerHTML = fN(geral.results[0].total_new_cases_today)
-        settings.eleKMund.innerHTML = fN(geral.results[0].total_deaths)
-        settings.eleKnMund.innerHTML = fN(geral.results[0].total_new_deaths_today)
-        settings.eleCMund.innerHTML = fN(geral.results[0].total_recovered)
-        settings.eleNcMund.innerHTML = fN(geral.results[0].total_unresolved)
+        } else if (event.type == 'change') {
+            if (event.target.value == 'mundo') {
+                const mundo = conectDbg()
 
-        viewG(geral.results[0].total_active_cases, geral.results[0].total_deaths, geral.results[0].total_recovered)
-        viewB(br.countrydata[0].total_active_cases, br.countrydata[0].total_deaths, br.countrydata[0].total_recovered)
+                settings.eleCtG.innerHTML = fN(mundo.results[0].total_cases)
+                settings.eleCaG.innerHTML = fN(mundo.results[0].total_active_cases)
+                settings.eleCsG.innerHTML = fN(mundo.results[0].total_serious_cases)
+                settings.eleKG.innerHTML = fN(mundo.results[0].total_deaths)
+                settings.eleCG.innerHTML = fN(mundo.results[0].total_recovered)
+                settings.eleCnG.innerHTML = fN(mundo.results[0].total_new_cases_today)
+                settings.eleKnG.innerHTML = fN(mundo.results[0].total_new_deaths_today)
+                settings.eleNrG.innerHTML = fN(mundo.results[0].total_unresolved)
+
+            } else {
+                const pais = conectDbp(defaults.baseURL + event.target.value)
+
+                settings.eleCtG.innerHTML = fN(pais.countrydata[0].total_cases)
+                settings.eleCaG.innerHTML = fN(pais.countrydata[0].total_active_cases)
+                settings.eleCsG.innerHTML = fN(pais.countrydata[0].total_serious_cases)
+                settings.eleKG.innerHTML = fN(pais.countrydata[0].total_deaths)
+                settings.eleCG.innerHTML = fN(pais.countrydata[0].total_recovered)
+                settings.eleCnG.innerHTML = fN(pais.countrydata[0].total_new_cases_today)
+                settings.eleKnG.innerHTML = fN(pais.countrydata[0].total_new_deaths_today)
+                settings.eleNrG.innerHTML = fN(pais.countrydata[0].total_unresolved)
+            }
+        }
     }
 
     const fN = function(value) {
@@ -99,23 +198,16 @@
         return r.split('').reverse().join('')
     }
 
-    const conectDb = function() {
+    const conectDbg = function() {
         var Dados = new XMLHttpRequest()
         Dados.open("POST", settings.urlG, false)
         Dados.send()
         return JSON.parse(Dados.responseText)
     }
 
-    const conectDbBR = function() {
+    const conectDbp = function(url) {
         var Geral = new XMLHttpRequest()
-        Geral.open("POST", settings.urlBR, false)
-        Geral.send()
-        return JSON.parse(Geral.responseText)
-    }
-
-    const conectDbUS = function() {
-        var Geral = new XMLHttpRequest()
-        Geral.open("POST", settings.urlUS, false)
+        Geral.open("POST", url, false)
         Geral.send()
         return JSON.parse(Geral.responseText)
     }
@@ -187,46 +279,82 @@
 
     const setUp = function() {
         settings.urlG = defaults.baseURLG
-        settings.urlBR = defaults.baseURLBR
-        settings.urlUS = defaults.baseURLUS
+
+        settings.eleOP = defaults.eleMain.querySelector(defaults.eleOP)
 
         settings.eleInfcG = defaults.eleMain.querySelector(defaults.eleInfcG)
         settings.eleCurG = defaults.eleMain.querySelector(defaults.eleCurG)
         settings.eleKillG = defaults.eleMain.querySelector(defaults.eleKillG)
 
 
-        settings.eleTcB = defaults.eleMain.querySelector(defaults.eleTcB)
-        settings.eleCaB = defaults.eleMain.querySelector(defaults.eleCaB)
-        settings.eleCsB = defaults.eleMain.querySelector(defaults.eleCsB)
-        settings.eleCnB = defaults.eleMain.querySelector(defaults.eleCnB)
-        settings.eleKB = defaults.eleMain.querySelector(defaults.eleKB)
-        settings.eleKnB = defaults.eleMain.querySelector(defaults.eleKnB)
-        settings.eleCB = defaults.eleMain.querySelector(defaults.eleCB)
-        settings.eleNcB = defaults.eleMain.querySelector(defaults.eleNcB)
+        settings.eleCtG = defaults.eleMain.querySelector(defaults.eleCtG)
+        settings.eleCaG = defaults.eleMain.querySelector(defaults.eleCaG)
+        settings.eleCsG = defaults.eleMain.querySelector(defaults.eleCsG)
+        settings.eleKG = defaults.eleMain.querySelector(defaults.eleKG)
+        settings.eleCG = defaults.eleMain.querySelector(defaults.eleCG)
+        settings.eleCnG = defaults.eleMain.querySelector(defaults.eleCnG)
+        settings.eleKnG = defaults.eleMain.querySelector(defaults.eleKnG)
+        settings.eleNrG = defaults.eleMain.querySelector(defaults.eleNrG)
 
-
-        settings.eleTcUs = defaults.eleMain.querySelector(defaults.eleTcUs)
-        settings.eleCaUs = defaults.eleMain.querySelector(defaults.eleCaUs)
-        settings.eleCsUs = defaults.eleMain.querySelector(defaults.eleCsUs)
-        settings.eleCnUs = defaults.eleMain.querySelector(defaults.eleCnUs)
-        settings.eleKUs = defaults.eleMain.querySelector(defaults.eleKUs)
-        settings.eleKnUs = defaults.eleMain.querySelector(defaults.eleKnUs)
-        settings.eleCUs = defaults.eleMain.querySelector(defaults.eleCUs)
-        settings.eleNcUs = defaults.eleMain.querySelector(defaults.eleNcUs)
-
-
-        settings.eleTcMund = defaults.eleMain.querySelector(defaults.eleTcMund)
-        settings.eleCaMund = defaults.eleMain.querySelector(defaults.eleCaMund)
-        settings.eleCsMund = defaults.eleMain.querySelector(defaults.eleCsMund)
-        settings.eleCnMund = defaults.eleMain.querySelector(defaults.eleCnMund)
-        settings.eleKMund = defaults.eleMain.querySelector(defaults.eleKMund)
-        settings.eleKnMund = defaults.eleMain.querySelector(defaults.eleKnMund)
-        settings.eleCMund = defaults.eleMain.querySelector(defaults.eleCMund)
-        settings.eleNcMund = defaults.eleMain.querySelector(defaults.eleNcMund)
+        settings.eleACB = defaults.eleMain.querySelector(defaults.eleACB)
+        settings.eleACMB = defaults.eleMain.querySelector(defaults.eleACMB)
+        settings.eleALB = defaults.eleMain.querySelector(defaults.eleALB)
+        settings.eleALMB = defaults.eleMain.querySelector(defaults.eleALMB)
+        settings.eleAPB = defaults.eleMain.querySelector(defaults.eleAPB)
+        settings.eleAPMB = defaults.eleMain.querySelector(defaults.eleAPMB)
+        settings.eleAMB = defaults.eleMain.querySelector(defaults.eleAMB)
+        settings.eleAMMB = defaults.eleMain.querySelector(defaults.eleAMMB)
+        settings.eleBAB = defaults.eleMain.querySelector(defaults.eleBAB)
+        settings.eleBAMB = defaults.eleMain.querySelector(defaults.eleBAMB)
+        settings.eleCEB = defaults.eleMain.querySelector(defaults.eleCEB)
+        settings.eleCEMB = defaults.eleMain.querySelector(defaults.eleCEMB)
+        settings.eleDFB = defaults.eleMain.querySelector(defaults.eleDFB)
+        settings.eleDFMB = defaults.eleMain.querySelector(defaults.eleDFMB)
+        settings.eleESB = defaults.eleMain.querySelector(defaults.eleESB)
+        settings.eleESMB = defaults.eleMain.querySelector(defaults.eleESMB)
+        settings.eleGOB = defaults.eleMain.querySelector(defaults.eleGOB)
+        settings.eleGOMB = defaults.eleMain.querySelector(defaults.eleGOMB)
+        settings.eleMAB = defaults.eleMain.querySelector(defaults.eleMAB)
+        settings.eleMAMB = defaults.eleMain.querySelector(defaults.eleMAMB)
+        settings.eleMTB = defaults.eleMain.querySelector(defaults.eleMTB)
+        settings.eleMTMB = defaults.eleMain.querySelector(defaults.eleMTMB)
+        settings.eleMSB = defaults.eleMain.querySelector(defaults.eleMSB)
+        settings.eleMSMB = defaults.eleMain.querySelector(defaults.eleMSMB)
+        settings.eleMGB = defaults.eleMain.querySelector(defaults.eleMGB)
+        settings.eleMGMB = defaults.eleMain.querySelector(defaults.eleMGMB)
+        settings.elePAB = defaults.eleMain.querySelector(defaults.elePAB)
+        settings.elePAMB = defaults.eleMain.querySelector(defaults.elePAMB)
+        settings.elePBB = defaults.eleMain.querySelector(defaults.elePBB)
+        settings.elePBMB = defaults.eleMain.querySelector(defaults.elePBMB)
+        settings.elePRB = defaults.eleMain.querySelector(defaults.elePRB)
+        settings.elePRMB = defaults.eleMain.querySelector(defaults.elePRMB)
+        settings.elePEB = defaults.eleMain.querySelector(defaults.elePEB)
+        settings.elePEMB = defaults.eleMain.querySelector(defaults.elePEMB)
+        settings.elePIB = defaults.eleMain.querySelector(defaults.elePIB)
+        settings.elePIMB = defaults.eleMain.querySelector(defaults.elePIMB)
+        settings.eleRJB = defaults.eleMain.querySelector(defaults.eleRJB)
+        settings.eleRJMB = defaults.eleMain.querySelector(defaults.eleRJMB)
+        settings.eleRNB = defaults.eleMain.querySelector(defaults.eleRNB)
+        settings.eleRNMB = defaults.eleMain.querySelector(defaults.eleRNMB)
+        settings.eleRSB = defaults.eleMain.querySelector(defaults.eleRSB)
+        settings.eleRSMB = defaults.eleMain.querySelector(defaults.eleRSMB)
+        settings.eleROB = defaults.eleMain.querySelector(defaults.eleROB)
+        settings.eleROMB = defaults.eleMain.querySelector(defaults.eleROMB)
+        settings.eleRRB = defaults.eleMain.querySelector(defaults.eleRRB)
+        settings.eleRRMB = defaults.eleMain.querySelector(defaults.eleRRMB)
+        settings.eleSCB = defaults.eleMain.querySelector(defaults.eleSCB)
+        settings.eleSCMB = defaults.eleMain.querySelector(defaults.eleSCMB)
+        settings.eleSPB = defaults.eleMain.querySelector(defaults.eleSPB)
+        settings.eleSPMB = defaults.eleMain.querySelector(defaults.eleSPMB)
+        settings.eleSEB = defaults.eleMain.querySelector(defaults.eleSEB)
+        settings.eleSEMB = defaults.eleMain.querySelector(defaults.eleSEMB)
+        settings.eleTOB = defaults.eleMain.querySelector(defaults.eleTOB)
+        settings.eleTOMB = defaults.eleMain.querySelector(defaults.eleTOMB)
     }
 
     const events = function() {
         window.addEventListener('load', main)
+        settings.eleOP.addEventListener('change', main)
     }
 
     const init = function(options) {

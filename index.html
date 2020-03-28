@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-    <!-- 
-        Desenvolvido por: Eike Athylas
-        Instagram: @eikebenizioo 
-    -->
-
 <html lang="pt_BR">
 
 <head>
@@ -22,14 +17,14 @@
 
     <!-- Open Graph Facebook WhatsApp -->
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:title" content="Coronavírus" />
+    <meta property="og:title" content="Coronavírus em tempo real" />
     <meta property="og:description" content="Site desenvolvido com o proposito de mostrar em tempo real as Estatísticas do COVID-19" />
     <meta property="og:url" content="https://eikeathylas.github.io/covid-19/">
     <meta property="og:site_name" content="Eike Athylas" />
     <meta property="og:type" content="website">
 
     <!-- Twitter -->
-    <meta name="twitter:title" content="Coronavírus" />
+    <meta name="twitter:title" content="Coronavírus em tempo real" />
     <meta name="twitter:description" content="Site desenvolvido com o proposito de mostrar em tempo real as Estatísticas do COVID-19" />
     <meta name="twitter:url" content="https://eikeathylas.github.io/covid-19/">
     <meta name="twitter:card" content="summary_large_image">
@@ -159,87 +154,97 @@
 
 
                         <div class="col-lg-12 mb-4">
-
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <!-- <h6 class="m-0 font-weight-bold text-primary">Brasil</h6> -->
-
-                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" id="pills-br-tab" data-toggle="pill" href="#pills-br" role="tab" aria-controls="pills-br" aria-selected="true">Brasil</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pills-us-tab" data-toggle="pill" href="#pills-us" role="tab" aria-controls="pills-us" aria-selected="false">Estados Unidos</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" id="pills-mund-tab" data-toggle="pill" href="#pills-mund" role="tab" aria-controls="pills-mund" aria-selected="false">Geral</a>
-                                        </li>
-                                    </ul>
+                                <div class="card-header py-3"><select id="op" class="custom-select">
+                                        <option value="BR" selected>Brasil</option>
+                                        <option value="US">Estados Unidos</option>
+                                        <option value="IT">Itália</option>
+                                        <option value="CN">China</option>
+                                        <option value="ES">Espanha</option>
+                                        <option value="DE">Alemanha</option>
+                                        <option value="IR">Irã</option>
+                                        <option value="FR">França</option>
+                                        <option value="GB">Reino Unido</option>
+                                        <option value="CH">Suíça</option>
+                                        <option value="AT">Áustria</option>
+                                        <option value="CA">Canadá</option>
+                                        <option value="AU">Austrália</option>
+                                        <option value="EC">Equador</option>
+                                        <option value="CL">Chile</option>
+                                        <option value="JP">Japão</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="DK">Dinamarca</option>
+                                        <option value="mundo">Em todo mundo</option>
+                                    </select>
                                 </div>
                                 <div class="card-body">
-                                    <div class="tab-content" id="pills-tabContent">
-                                        <div class="tab-pane fade show active" id="pills-br" role="tabpanel" aria-labelledby="pills-br-tab">
-                                            <h5 class="middle font-weight-bold">Casos totais:<span id="tcB" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Casos ativos:<span id="caB" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Casos sérios:<span id="csB" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Mortos:<span id="kB" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Curados:<span id="cB" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Casos novos:<span id="cnB" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Novos mortos:<span id="knB" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Não resolvido:<span id="ncB" class="float-right">--</span></h5>
-                                        </div>
-                                        <div class="tab-pane fade" id="pills-us" role="tabpanel" aria-labelledby="pills-us-tab">
-                                            <h5 class="middle font-weight-bold">Casos totais:<span id="tcUs" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Casos ativos:<span id="caUs" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Casos sérios:<span id="csUs" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Mortos:<span id="kUs" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Curados:<span id="cUs" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Casos novos:<span id="cnUs" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Novos mortos:<span id="knUs" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Não resolvido:<span id="ncUs" class="float-right">--</span></h5>
-                                        </div>
-                                        <div class="tab-pane fade" id="pills-mund" role="tabpanel" aria-labelledby="pills-mund-tab">
-                                            <h5 class="middle font-weight-bold">Casos totais:<span id="tcMund" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Casos ativos:<span id="caMund" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Casos sérios:<span id="csMund" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Mortos:<span id="kMund" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Curados:<span id="cMund" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Casos novos:<span id="cnMund" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Novos mortos:<span id="knMund" class="float-right">--</span></h5>
-                                            <hr>
-                                            <h5 class="middle font-weight-bold">Não resolvido:<span id="ncMund" class="float-right">--</span></h5>
-                                        </div>
-                                    </div>
+                                    <h5 class="middle font-weight-bold">Casos totais:<span id="ctG" class="float-right">--</span></h5><hr>
+                                    <h5 class="middle font-weight-bold">Casos ativos:<span id="caG" class="float-right">--</span></h5><hr>
+                                    <h5 class="middle font-weight-bold">Casos sérios:<span id="csG" class="float-right">--</span></h5><hr>
+                                    <h5 class="middle font-weight-bold">Mortos:<span id="kG" class="float-right">--</span></h5><hr>
+                                    <h5 class="middle font-weight-bold">Curados:<span id="cG" class="float-right">--</span></h5><hr>
+                                    <h5 class="middle font-weight-bold">Casos novos:<span id="cnG" class="float-right">--</span></h5><hr>
+                                    <h5 class="middle font-weight-bold">Novos mortos:<span id="knG" class="float-right">--</span></h5><hr>
+                                    <h5 class="middle font-weight-bold">Não resolvido:<span id="nrG" class="float-right">--</span></h5>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-lg-12 mb-4">
 
+                            <div class="card shadow mb-4">
+
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Estados brasileiros</h6>
+                                </div>
+                                <div class="card-body">
+
+                                    <h6 class="middle font-weight-bold text-info">Acre <b class="text-danger">Ativos:</b> <span id="ACB" class="text-danger">--</span>   <span id="ACMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Alagoas <b class="text-danger">Ativos:</b> <span id="ALB" class="text-danger">--</span>   <span id="ALMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Amapá <b class="text-danger">Ativos:</b> <span id="APB" class="text-danger">--</span>   <span id="APMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Amazonas <b class="text-danger">Ativos:</b> <span id="AMB" class="text-danger">--</span>   <span id="AMMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Bahia <b class="text-danger">Ativos:</b> <span id="BAB" class="text-danger">--</span>   <span id="BAMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Ceará <b class="text-danger">Ativos:</b> <span id="CEB" class="text-danger">--</span>   <span id="CEMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Distrito Federal <b class="text-danger">Ativos:</b> <span id="DFB" class="text-danger">--</span>   <span id="DFMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Espírito Santo <b class="text-danger">Ativos:</b> <span id="ESB" class="text-danger">--</span>   <span id="ESMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Goiás <b class="text-danger">Ativos:</b> <span id="GOB" class="text-danger">--</span>   <span id="GOMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Maranhão <b class="text-danger">Ativos:</b> <span id="MAB" class="text-danger">--</span>   <span id="MAMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Mato Grosso <b class="text-danger">Ativos:</b> <span id="MTB" class="text-danger">--</span>   <span id="MTMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Mato Grosso do Sul <b class="text-danger">Ativos:</b> <span id="MSB" class="text-danger">--</span>   <span id="MSMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Minas Gerais <b class="text-danger">Ativos:</b> <span id="MGB" class="text-danger">--</span>   <span id="MGMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Pará <b class="text-danger">Ativos:</b> <span id="PAB" class="text-danger">--</span>   <span id="PAMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Paraíba <b class="text-danger">Ativos:</b> <span id="PBB" class="text-danger">--</span>   <span id="PBMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Paraná <b class="text-danger">Ativos:</b> <span id="PRB" class="text-danger">--</span>   <span id="PRMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Pernambuco <b class="text-danger">Ativos:</b> <span id="PEB" class="text-danger">--</span>   <span id="PEMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Piauí <b class="text-danger">Ativos:</b> <span id="PIB" class="text-danger">--</span>   <span id="PIMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Rio de Janeiro <b class="text-danger">Ativos:</b> <span id="RJB" class="text-danger">--</span>   <span id="RJMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Rio Grande do Norte <b class="text-danger">Ativos:</b> <span id="RNB" class="text-danger">--</span>   <span id="RNMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Rio Grande do Sul <b class="text-danger">Ativos:</b> <span id="RSB" class="text-danger">--</span>   <span id="RSMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Rondônia <b class="text-danger">Ativos:</b> <span id="ROB" class="text-danger">--</span>   <span id="ROMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Roraima <b class="text-danger">Ativos:</b> <span id="RRB" class="text-danger">--</span>   <span id="RRMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Santa Catarina <b class="text-danger">Ativos:</b> <span id="SCB" class="text-danger">--</span>   <span id="SCMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">São Paulo <b class="text-danger">Ativos:</b> <span id="SPB" class="text-danger">--</span>   <span id="SPMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Sergipe <b class="text-danger">Ativos:</b> <span id="SEB" class="text-danger">--</span>   <span id="SEMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6><hr>
+                                    <h6 class="middle font-weight-bold text-info">Tocantins <b class="text-danger">Ativos:</b> <span id="TOB" class="text-danger">--</span>   <span id="TOMB" class="float-right text-secondary">--</span> <b class="float-right text-secondary">Mortos: </b></h6>
+
+                                </div>
+                            </div>
                         </div>
 
                     </div>
 
                 </div>
             </div>
-        </div>
+            <footer class="container">
+                <div class="card shadow mb-4">
+                    <div class="card-body text-center">
+                        <p> Desenvolvi esse site com o proposito de atualizar a todos em tempo real, como anda uma parte do mundo e principalmente nosso Brasil com essa nova pandemia <strong>Coronavírus</strong></p><hr>
+                        <p> Tem alguma sugestão de melhoria? Encontrou algum erro? Me envia por favor, esse é meu instagram basta clicar > <a class="text-primary font-weight-bold" href="https://www.instagram.com/eikebenizioo">@eikebenizioo</a></p>
+                        <p> <b class="text-danger font-weight-bold">O site ainda está em desenvolvimento!</b></p>
+
+                    </div>
+                </div>
+            </footer>
+            </div>
     </div>
 
 
@@ -249,6 +254,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    <script type="text/javascript" src="https://sigageomarketing.com.br/coronavirus/coronavirus.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
 
