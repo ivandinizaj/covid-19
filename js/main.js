@@ -86,11 +86,6 @@
             const mundo = conectDbg()
             const pais = conectDbp(defaults.baseURL + 'BR')
 
-            var i = 0
-            for (i; i <= dados.features.length - 1; i++) {
-                console.log('id = ' + i + ' Estado = ' + dados.features[i].properties.estado_geo + ' Ativos = ' + dados.features[i].properties.casosconfirmados + ' Mortos = ' + dados.features[i].properties.obitos)
-            }
-
             settings.eleInfcG.innerHTML = fN(mundo.results[0].total_cases)
             settings.eleKillG.innerHTML = fN(mundo.results[0].total_deaths)
             settings.eleCurG.innerHTML = fN(mundo.results[0].total_recovered)
