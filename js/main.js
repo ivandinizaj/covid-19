@@ -121,12 +121,12 @@
         eleOAPE: '#OAPE',
         eleCMPE: '#CMPE',
         eleCAPE: '#CAPE',
+        elePLMPE: '#PLMPE',
+        elePLAPE: '#PLAPE',
         elePMPE: '#PMPE',
         elePAPE: '#PAPE',
-        
         eleFMPE: '#FMPE',
         eleFAPE: '#FAPE',
-
         eleJMPE: '#JMPE',
         eleJAPE: '#JAPE',
         eleEMPE: '#EMPE',
@@ -514,6 +514,10 @@
                 if (brasil[j].split(',')[2] == 'Caruaru/PE') {
                     settings.eleCMPE.innerHTML = fN(parseInt(brasil[j].split(',')[4]))
                     settings.eleCAPE.innerHTML = fN(parseInt(brasil[j].split(',')[5]))
+                }
+                if (brasil[j].split(',')[2] == 'Palmares/PE') {
+                    settings.elePLMPE.innerHTML = fN(parseInt(brasil[j].split(',')[4]))
+                    settings.elePLAPE.innerHTML = fN(parseInt(brasil[j].split(',')[5]))
                 }
                 if (brasil[j].split(',')[2] == 'Petrolina/PE') {
                     settings.elePMPE.innerHTML = fN(parseInt(brasil[j].split(',')[4]))
@@ -977,12 +981,12 @@
         settings.eleOAPE = defaults.eleMain.querySelector(defaults.eleOAPE)
         settings.eleCMPE = defaults.eleMain.querySelector(defaults.eleCMPE)
         settings.eleCAPE = defaults.eleMain.querySelector(defaults.eleCAPE)
+        settings.elePLMPE = defaults.eleMain.querySelector(defaults.elePLMPE)
+        settings.elePLAPE = defaults.eleMain.querySelector(defaults.elePLAPE)
         settings.elePMPE = defaults.eleMain.querySelector(defaults.elePMPE)
         settings.elePAPE = defaults.eleMain.querySelector(defaults.elePAPE)
-        
         settings.eleFMPE = defaults.eleMain.querySelector(defaults.eleFMPE)
         settings.eleFAPE = defaults.eleMain.querySelector(defaults.eleFAPE)
-
         settings.eleJMPE = defaults.eleMain.querySelector(defaults.eleJMPE)
         settings.eleJAPE = defaults.eleMain.querySelector(defaults.eleJAPE)
         settings.eleEMPE = defaults.eleMain.querySelector(defaults.eleEMPE)
