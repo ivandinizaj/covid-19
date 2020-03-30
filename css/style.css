@@ -11291,7 +11291,7 @@ body.sidebar-toggled footer.sticky-footer {
 }
 
 .accordion details {
-  font-size: 18px;
+  font-size: 13px;
   padding: 10px;
   margin: 5px;
   border-radius: 15px;
@@ -11312,7 +11312,7 @@ body.sidebar-toggled footer.sticky-footer {
 }
 
 .accordion details p {
-  font-size: 16px;
+  font-size: 13px;
   line-height: 1.2em;
   cursor: auto;
   animation: appear 1s ease;

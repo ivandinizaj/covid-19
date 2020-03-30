@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 
     <title>Covid-19 (Ao vivo)</title>
 
@@ -23,19 +23,20 @@
     <meta property="og:url" content="https://eikeathylas.github.io/covid-19/">
     <meta property="og:site_name" content="Eike Athylas" />
     <meta property="og:type" content="website">
+    <meta property="og:image" content="img/logo.png">
 
     <!-- Twitter -->
     <meta name="twitter:title" content="Coronavírus em tempo real" />
     <meta name="twitter:description" content="Site desenvolvido com o proposito de mostrar em tempo real as Estatísticas do COVID-19" />
     <meta name="twitter:url" content="https://eikeathylas.github.io/covid-19/">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="img/logo.png" />
 
 
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
 
 </head>
 
@@ -52,8 +53,8 @@
 
                 <div id="info" class="container-fluid">
 
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4 text-center">
-                        <h1 class="h3 mt-5 mb-0 text-gray-800"><b>Acompanhamento em tempo real do COVID-19</b></h1>
+                    <div class="mt-5 align-items-center justify-content-between mb-4 text-center">
+                        <h1 class="h3 mt-5 mb-0 text-gray-800"><b>Tempo real do Coronavírus</b></h1>
                     </div>
 
                     <div class="row">
@@ -196,7 +197,7 @@
                             <div class="card shadow mb-4">
 
                                 <div class="card-header py-3">
-                                    <h6 class="font-weight-bold text-primary text-center">Estados brasileiros<br><br><span id="date" class="text-warning">--</span></h6>
+                                    <h6 class="font-weight-bold text-primary text-center">Estados brasileiros</h6>
                                 </div>
                                 <div class="card-body">
 
@@ -206,7 +207,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="ACB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="ACMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Rio Branco: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Rio Branco:<span id="RBMAC" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="RBAAC" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -217,7 +218,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="ALB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="ALMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Maceió: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Maceió: <span id="MMAL" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="MAAL" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -228,7 +229,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="APB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="APMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Macapá: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Macapá: <span id="MMAP" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="MAAP" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -239,7 +240,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="AMB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="AMMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Manaus: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Manaus: <span id="MMAM" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="MAAM" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -250,7 +251,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="BAB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="BAMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Salvador: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Salvador: <span id="SMBA" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="SABA" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -261,7 +262,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="CEB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="CEMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Fortaleza: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Fortaleza: <span id="FMCE" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="FACE" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -272,7 +273,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="DFB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="DFMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Brasília: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Brasília: <span id="BMDF" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="BADF" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -283,7 +284,8 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="ESB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="ESMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Vitória: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Vitória: <span id="VMES" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="VAES" class="float-right text-danger">--</span></p>
+                                          <p class="text-info font-weight-bold">Vila Velha: <span id="VVMES" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="VVAES" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -294,7 +296,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="GOB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="GOMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Goiânia: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Goiânia: <span id="GMGO" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="GAGO" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -305,7 +307,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="MAB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="MAMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">São Luís: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">São Luís: <span id="SLMMA" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="SLAMA" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -316,7 +318,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="MTB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="MTMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Cuiabá: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Cuiabá: <span id="CMMT" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="CAMT" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr /> 
@@ -327,7 +329,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="MSB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="MSMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Campo Grande: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Campo Grande: <span id="CGMMS" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="CGAMS" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -338,7 +340,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="MGB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="MGMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Belo Horizonte: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Belo Horizonte: <span id="BHMMG" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="BHAMG" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -349,7 +351,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="PRB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="PRMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Curitiba: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Curitiba: <span id="CMPR" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="CAPR" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -360,7 +362,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="PBB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="PBMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">João Pessoa: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">João Pessoa: <span id="JPMPB" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="JPAPB" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -371,7 +373,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="PAB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="PAMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Belém: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Belém: <span id="BMPA" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="BAPA" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -382,9 +384,13 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="PEB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="PEMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Recife: <span id="" class="float-right text-info">--</span></p>
-                                          <p class="text-info font-weight-bold">Olinda: <span id="" class="float-right text-info">--</span></p>
-                                          <p class="text-info font-weight-bold">Jaboatão dos Guararapes: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Recife: <span id="RMPE" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="RAPE" class="float-right text-danger">--</span></p>
+                                          <p class="text-info font-weight-bold">Olinda: <span id="OMPE" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="OAPE" class="float-right text-danger">--</span></p>
+                                          <p class="text-info font-weight-bold">Caruaru: <span id="CMPE" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="CAPE" class="float-right text-danger">--</span></p>
+                                          <p class="text-info font-weight-bold">Petrolina: <span id="PMPE" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="PAPE" class="float-right text-danger">--</span></p>
+                                          <p class="text-info font-weight-bold">Fernando de Noronha: <span id="FMPE" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="FAPE" class="float-right text-danger">--</span></p>
+                                          <p class="text-info font-weight-bold">Jaboatão dos Guararapes: <span id="JMPE" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="JAPE" class="float-right text-danger">--</span></p><hr>
+                                          <p class="text-info font-weight-bold">Estrangeiros: <span id="EMPE" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="EAPE" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -395,7 +401,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="PIB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="PIMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Teresina: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Teresina: <span id="TMPI" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="TAPI" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -406,7 +412,8 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="RNB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="RNMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Natal: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Natal: <span id="NMRN" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="NARN" class="float-right text-danger">--</span></p>
+                                          <p class="text-info font-weight-bold">Mossoró: <span id="MMRN" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="MARN" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -417,7 +424,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="RSB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="RSMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Porto Alegre: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Porto Alegre: <span id="PMRS" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="PARS" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -428,7 +435,8 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="RJB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="RJMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Rio de Janeiro: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Niterói: <span id="NMRJ" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="NARJ" class="float-right text-danger">--</span></p>
+                                          <p class="text-info font-weight-bold">Rio de Janeiro: <span id="RJMRJ" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="RJARJ" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -439,7 +447,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="ROB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="ROMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Porto Velho: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Porto Velho: <span id="PMRO" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="PARO" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -450,7 +458,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="RRB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="RRMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Boa Vista: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Boa Vista: <span id="BMRR" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="BARR" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -461,7 +469,8 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="SCB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="SCMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Florianópolis: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">São José: <span id="SMSC" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="SASC" class="float-right text-danger">--</span></p>
+                                          <p class="text-info font-weight-bold">Florianópolis: <span id="FMSC" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="FASC" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -472,7 +481,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="SEB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="SEMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Aracaju: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Aracaju: <span id="AMSE" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="AASE" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -483,7 +492,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="SPB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="SPMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">São Paulo: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">São Paulo: <span id="SPMSP" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="SPASP" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -494,7 +503,7 @@
                                           <hr />
                                           <p class="text-danger font-weight-bold">Ativos: <span id="TOB" class="text-danger float-right">--</span></p>
                                           <p class="text-secondary font-weight-bold">Obitos: <span id="TOMB" class="float-right text-secondary">--</span></p>
-                                          <p class="text-info font-weight-bold">Palmas: <span id="" class="float-right text-info">--</span></p>
+                                          <p class="text-info font-weight-bold">Palmas: <span id="PMTO" class="float-right text-secondary">--</span><span class="float-right"> - </span><span id="PATO" class="float-right text-danger">--</span></p>
                                         </details>
                                     </div>
                                     <hr />
@@ -524,7 +533,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="https://sigageomarketing.com.br/coronavirus/coronavirus.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
 
