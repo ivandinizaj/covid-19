@@ -7,6 +7,7 @@
         baseURL: 'https://thevirustracker.com/free-api?countryTotal=',
         eleMain: document.getElementById('info'),
         eleOP: '#op',
+        eleDate: '#date',
 
         eleInfcG: '#infcG',
         eleCurG: '#curG',
@@ -82,9 +83,11 @@
     const main = (event) => {
 
         if (event.type == 'load') {
-            console.log('Carregou')
             const mundo = conectDbg()
             const pais = conectDbp(defaults.baseURL + 'BR')
+            console.log(dados.features[27].properties.data)
+
+            settings.eleDate.innerHTML = 'Atualizados às: ' + dados.features[27].properties.data
 
             settings.eleInfcG.innerHTML = fN(mundo.results[0].total_cases)
             settings.eleKillG.innerHTML = fN(mundo.results[0].total_deaths)
@@ -281,6 +284,7 @@
         settings.urlG = defaults.baseURLG
 
         settings.eleOP = defaults.eleMain.querySelector(defaults.eleOP)
+        settings.eleDate = defaults.eleMain.querySelector(defaults.eleDate)
 
         settings.eleInfcG = defaults.eleMain.querySelector(defaults.eleInfcG)
         settings.eleCurG = defaults.eleMain.querySelector(defaults.eleCurG)
